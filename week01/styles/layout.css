@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  height: 100vh;
+  background-color: #2a2c2e;
+}
+
+header {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  color: white;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: grey;
+}
+
+header nav a {
+    color: white;
+}
+
+section main {
+  background-color: #6d6d73;
+}
+
+section aside {
+    background-color: #f0f0f5;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+footer h3 {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+h1, h2 {
+    padding-left: 1rem;
+}
