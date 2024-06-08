@@ -47,4 +47,9 @@ footer h3 {
 
 h1, h2 {
     padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+footer h3 {
+    padding-top: 1rem;
 }
