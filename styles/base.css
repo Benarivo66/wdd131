@@ -2,14 +2,12 @@
 
 .lora-normal {
   font-family: "Lora", serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
 .outfit-normal {
   font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
@@ -95,10 +93,6 @@ section p {
 
 section ul {
   padding: 2rem 0 0 2rem;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
-  /* align-items: center; */
 }
 
 section ul li {
