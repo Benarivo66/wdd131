@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&display=swap");
+
+.lora-normal {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.outfit-normal {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --primary-color: #729b79;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-height: 100vh;
+  width: 80%;
+  display: grid;
+  grid-template-rows: 3fr 12fr 2fr;
+  gap: 1rem;
+  margin: 1rem 0 0 1rem;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  font: var(--paragraph-font);
+}
+
+header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  height: 30%;
+}
+
+nav a {
+  color: white;
+}
+
+nav a:hover {
+	text-decoration: overline;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+section {
+  border: 0.05rem solid rgb(82, 75, 75);
+  border-radius: 0.5rem;
+}
+
+section h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+}
+
+section h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.1rem thin rgb(82, 75, 75);
+  text-decoration: underline;
+  text-underline-offset: 0.5em;
+}
+
+section p {
+  padding: 1rem 0 0 1rem;
+}
+
+section ul {
+  padding: 2rem 0 0 2rem;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  /* align-items: center; */
+}
+
+section ul li {
+  padding-top: 0.3rem;
+}
+
+.card img {
+  max-width: 70%;
+  height: auto;
+  padding-top: 15%;
+}
+
+.flag img {
+max-width: 30%;
+height: auto;
+padding-top: 5%;
+}
+
+.country {
+    padding: 3rem 0 0 2rem;
+}
+
+.country-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 1rem;
+}
+
+.flag {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.flag p {
+    padding-left: 0;
+}
+
+footer {
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
