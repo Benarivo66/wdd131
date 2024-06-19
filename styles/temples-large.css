@@ -1,16 +1,27 @@
-.lora-normal {
-  font-family: "Lora", serif;
-  font-weight: 600;
-  font-style: normal;
+@media screen and (min-width: 400px){
+    main div {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #menu {
+      display: none;
+    }
+
+    nav {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+
+    nav a {
+    display: block;
+    /* flex: 1 1 100%;   */
+    padding-left: 20%;
+    color: white;
+    text-decoration: none;
 }
 
-.outfit-normal {
-  font-family: "Outfit", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+nav a:hover {
+  text-decoration: underline double;
 }
 
-:root {
-  --primary-color: #729b79;
 }
-
