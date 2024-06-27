@@ -11,10 +11,10 @@
 }
 
 :root {
-  --primary-color: #729b79;
+  --primary-color: #086517;
   --secondary-color_1: rgb(244, 233, 233);
   --secondary-color_2: white;
-  --reduced-font: 0.8rem;
+  --reduced-font: 0.85rem;
   --large_h2_heading: 1.25rem;
 }
 
@@ -67,6 +67,8 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: var(--secondary-color_2);
+  font-size: 100%;
 }
 
 @media screen and (min-width: 600px) {
@@ -81,7 +83,7 @@ footer {
   #data,
   #weather {
     position: absolute;
-    display: inline-block;
+    display: block;
   }
 
   #data div,
@@ -90,7 +92,9 @@ footer {
     font-size: var(--reduced-font);
     padding: 10%;
     opacity: 0.7;
-    width:120%;
+    width:100%;
+    padding-top: 15%;
+    margin-left: 8%;
   }
 
   #data h2,
@@ -102,6 +106,9 @@ footer {
     display:flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    margin-bottom: -15%;
+    z-index: 1;
   }
 
   #data {
@@ -125,16 +132,3 @@ footer {
   }
 }
 
-/*
-#data h2,
-#weather h2 {
-  background-color: var(--primary-color);
-  font-size: var(--large_h2_heading);
-  padding: 2% 10%;
-  color: var(--secondary-color_2);
-  position: relative; 
-  top: -10%; 
-  left: 0.1rem;
-  margin-bottom: -10%; 
-}
-**/
