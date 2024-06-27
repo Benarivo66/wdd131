@@ -1,0 +1,140 @@
+.lora-normal {
+  font-family: "Lora", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.outfit-normal {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --primary-color: #729b79;
+  --secondary-color_1: rgb(244, 233, 233);
+  --secondary-color_2: white;
+  --reduced-font: 0.8rem;
+  --large_h2_heading: 1.25rem;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+ }
+
+main {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--secondary-color_2);
+  width: 100%;
+}
+
+picture img {
+  width: 100%;
+  height: auto;
+}
+
+#weather,
+#data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#data p,
+#weather p {
+  margin-bottom: 2px;
+}
+
+#weather img {
+  height: 3rem;
+  width: auto;
+}
+
+footer {
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+  main {
+    position: relative;
+  }
+
+  picture img {
+    max-height: 78vh;
+  }
+
+  #data,
+  #weather {
+    position: absolute;
+    display: inline-block;
+  }
+
+  #data div,
+  #weather div {
+    background-color: var(--secondary-color_1);
+    font-size: var(--reduced-font);
+    padding: 10%;
+    opacity: 0.7;
+    width:120%;
+  }
+
+  #data h2,
+  #weather h2 {
+    background-color: var(--primary-color);
+    font-size: var(--large_h2_heading);
+    padding: 2% 10%;
+    color: var(--secondary-color_2);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #data {
+    top: 2%;
+    left: 2%;
+    margin-left: 1%;
+  }
+
+  #weather h2::after {
+    content: "🌤";
+  }
+
+  #weather img {
+    display: none;
+  }
+
+  #weather {
+    bottom: 2%;
+    right: 2%;
+    margin-right: 1%;
+  }
+}
+
+/*
+#data h2,
+#weather h2 {
+  background-color: var(--primary-color);
+  font-size: var(--large_h2_heading);
+  padding: 2% 10%;
+  color: var(--secondary-color_2);
+  position: relative; 
+  top: -10%; 
+  left: 0.1rem;
+  margin-bottom: -10%; 
+}
+**/
