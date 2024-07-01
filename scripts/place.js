@@ -24,16 +24,6 @@ const calculateWindChill = (temp, windspeed) => {
     ).toFixed(2);
 };
 
-// windchill.addEventListener("load", () => {
-//     windchill.innerHTML =
-//       temp_value <= 10 && windspeed > 4.8
-//         ? `<strong>Wind Chill</strong>: ${calculateWindChill(
-//             temp,
-//             windspeed
-//           )}°C`
-//         : "<strong>Wind Chill</strong>: N/A";
-// })
-
 windchill.innerHTML =
   (temp_value <= 10) && (windspeed_value > 4.8)
     ? `<strong>Wind Chill</strong>: ${calculateWindChill(temp_value, windspeed_value)}°C`
