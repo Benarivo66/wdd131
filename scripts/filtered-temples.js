@@ -98,33 +98,33 @@ menu.addEventListener("click", () => {
 
 const templeDiv = document.querySelector("div");
 for (const temple of temples) {
-    const templeCard = document.createElement("div");
-    const templeInfo = document.createElement("div");
+  const templeCard = document.createElement("div");
+  templeCard.id = "templeCard"
+  const templeInfo = document.createElement("div");
+  templeInfo.id = "templeInfo";
 
-    const image = document.createElement("img");
-    image.src = temple.imageUrl;
-    image.alt = temple.templeName;
-    image.loading = "lazy";
+  const image = document.createElement("img");
+  image.src = temple.imageUrl;
+  image.alt = temple.templeName;
+  image.loading = "lazy";
 
-    // let dt = document.createElement('dt');
+  let locationTag = document.createElement("span");
+  let dedicatedTag = document.createElement("span");
+  let sizeTag = document.createElement("span");
 
-    const dl = document.createElement('dl');
-    const location = `${<dt>Location</dt>}`;
-    const dedicated = `${<dt>Dedicated</dt>}`;
-    const size = `${<dt>Size</dt>}`;
-    const dd1 = temple.location;
-    const dd2 = temple.dedicated;
-    const dd3 = temple.area;
+  const location = temple.location;
+  const dedicated = temple.dedicated;
+  const size = temple.area;
 
-    dl.append(location);
-    dl.append(dd1);
-    dl.append(dedicated);
-    dl.append(dd2);
-    dl.append(size);
-    dl.append(dd3);
+  locationTag.innerHTML = `Location: ${location}`;
+  dedicatedTag.innerHTML = `Dedicated: ${dedicated}`;
+  sizeTag.innerHTML = `Size: ${size}`;
 
-    templeInfo.append(dl);
-    templeCard.append(templeInfo);
-    templeCard.append(image);
-    templeDiv.append(templeCard);
+  templeInfo.append(locationTag);
+  templeInfo.append(dedicatedTag);
+  templeInfo.append(sizeTag);
+
+  templeCard.append(templeInfo);
+  templeCard.append(image);
+  templeDiv.append(templeCard);
 }

@@ -12,6 +12,7 @@
 
 :root {
   --primary-color: #729b79;
+  --secondary-color: rgb(211, 209, 209);
 }
 
 main {
@@ -78,6 +79,29 @@ nav a:hover {
 img {
   max-width: 70%;
   height: auto;
+}
+
+#templeCard {
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2%;
+  padding: 5%;
+}
+
+#templeInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+#templeInfo span {
+  text-align: left;
+  font-size: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  /* padding: 1%; */
+  margin: 2% auto;
 }
 
 footer {
