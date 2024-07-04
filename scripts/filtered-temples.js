@@ -141,53 +141,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const largeTemples = temples.filter((elem) => elem.area > 90000);
   const smallTemples = temples.filter((elem) => elem.area < 10000);
 
-  // const home = document.querySelector("#home");
-  // home.addEventListener("click", () => {
-  //   templeDiv.innerHTML = "";
-  //   displayTemples(temples);
-  // });
-  // const old = document.querySelector("#old");
-  // old.addEventListener("click", () => {
-  //   templeDiv.innerHTML = "";
-  //   displayTemples(oldTemples);
-  // });
-  // const newT = document.querySelector("#new");
-  // newT.addEventListener("click", () => {
-  //   templeDiv.innerHTML = "";
-  //   displayTemples(newTemples);
-  // });
-  // const large = document.querySelector("#large");
-  // large.addEventListener("click", () => {
-  //   templeDiv.innerHTML = "";
-  //   displayTemples(largeTemples);
-  // });
-  // const small = document.querySelector("#small");
-  // small.addEventListener("click", () => {
-  //   templeDiv.innerHTML = "";
-  //   displayTemples(smallTemples);
-  // });
+  const filterTemples = {
+    home: temples,
+    old: oldTemples,
+    new: newTemples,
+    large: largeTemples,
+    small: smallTemples,
+  };
 
+  const handleFilterTemplesClick = (filter) => {
+    templeDiv.innerHTML = "";
+    displayTemples(filterTemples[filter]);
+  };
 
-const filterTemples = {
-  home: temples,
-  old: oldTemples,
-  new: newTemples,
-  large: largeTemples,
-  small: smallTemples,
-};
-
-const handleFilterTemplesClick = (filter) => {
-  templeDiv.innerHTML = "";
-  displayTemples(filterTemples[filter]);
-};  
-
-Object.keys(filterTemples).forEach((key) => {
-  document
-    .querySelector(`#${key}`)
-    .addEventListener("click", () => handleFilterTemplesClick(key));
+  Object.keys(filterTemples).forEach((key) => {
+    document
+      .querySelector(`#${key}`)
+      .addEventListener("click", () => handleFilterTemplesClick(key));
+  });
 });
-
-});
-
-
-
