@@ -181,7 +181,7 @@ const handleFilterTemplesClick = (filter) => {
   displayTemples(filterTemples[filter]);
 };  
 
-Object.keys(handleFilterTemplesClick).forEach((key) => {
+Object.keys(filterTemples).forEach((key) => {
   document
     .querySelector(`#${key}`)
     .addEventListener("click", () => handleFilterTemplesClick(key));
