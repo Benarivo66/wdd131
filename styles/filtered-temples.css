@@ -11,7 +11,7 @@
 }
 
 :root {
-  --primary-color: #729b79;
+  --primary-color: #03390c;
   --secondary-color: rgb(211, 209, 209);
 }
 
@@ -81,7 +81,7 @@ img {
   height: auto;
 }
 
-#templeCard {
+.templeCard {
   background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
@@ -90,22 +90,22 @@ img {
   padding: 5%;
 }
 
-#templeInfo {
+.templeInfo {
   display: flex;
   flex-direction: column;
 }
 
-#templeInfo span {
+.templeInfo span {
   text-align: left;
   font-size: 0.7rem;
   display: flex;
   flex-direction: column;
-  /* padding: 1%; */
   margin: 2% auto;
 }
 
 footer {
   background-color: var(--primary-color);
+  color:var(--secondary-color);
   display: flex;
   flex-direction: column;
   justify-content: center;

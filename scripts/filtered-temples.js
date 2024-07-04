@@ -58,7 +58,7 @@ const temples = [
   {
     templeName: "Accra Ghana Temple",
     location: "Accra Ghana",
-    dedicated: "11 January, 2004",
+    dedicated: "2004, January, 11",
     area: 17500,
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/accra-ghana/1200x675/accra-ghana-temple-detail-249022-2400x1200.jpg",
@@ -66,65 +66,128 @@ const temples = [
   {
     templeName: "Frankfurt Germany Temple",
     location: "Frankfurt Germany",
-    dedicated: "28 August, 1987",
+    dedicated: "1987, August, 28",
     area: 20000,
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/frankfurt-germany/400x250/frankfurt-germany-temple-lds-82734-wallpaper.jpg",
   },
   {
-    templeName: "Johannesburg South Africa Temple",
-    location: "Johannesburg South Africa",
-    dedicated: "24 August, 1985",
-    area: 19184,
+    templeName: "Bern Switzerland Temple",
+    location: "Bern Switzerland",
+    dedicated: "1955, September, 11",
+    area: 35546,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/johannesburg-south-africa/400x640/johannesburg-south-africa-temple-lds-450241-wallpaper.jpg",
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/bern-switzerland/400x250/bern-switzerland-temple-lds-784295-wallpaper.jpg",
   },
 ];
 
-const today = new Date();
-const currentyear = document.querySelector("#currentyear");
-currentyear.innerHTML = today.getFullYear();
+document.addEventListener("DOMContentLoaded", () => {
+  const today = new Date();
+  const currentyear = document.querySelector("#currentyear");
+  currentyear.innerHTML = today.getFullYear();
 
-const menu = document.getElementById("menu");
-const navg = document.querySelector("nav");
+  const menu = document.getElementById("menu");
+  const navg = document.querySelector("nav");
 
-const lastModified = document.querySelector("#lastModified");
-lastModified.innerHTML = document.lastModified;
+  const lastModified = document.querySelector("#lastModified");
+  lastModified.innerHTML = document.lastModified;
 
-menu.addEventListener("click", () => {
-  navg.classList.toggle("open");
-  menu.classList.toggle("open");
+  menu.addEventListener("click", () => {
+    navg.classList.toggle("open");
+    menu.classList.toggle("open");
+  });
+
+  const templeDiv = document.querySelector("div");
+
+  const displayTemples = (temples) => {
+    for (const temple of temples) {
+      const templeCard = document.createElement("div");
+      templeCard.className = "templeCard";
+      const templeInfo = document.createElement("div");
+      templeInfo.className = "templeInfo";
+
+      const image = document.createElement("img");
+      image.src = temple.imageUrl;
+      image.alt = temple.templeName;
+      image.loading = "lazy";
+
+      let locationTag = document.createElement("span");
+      let dedicatedTag = document.createElement("span");
+      let sizeTag = document.createElement("span");
+
+      const location = temple.location;
+      const dedicated = temple.dedicated;
+      const size = temple.area;
+
+      locationTag.innerHTML = `Location: ${location}`;
+      dedicatedTag.innerHTML = `Dedicated: ${dedicated}`;
+      sizeTag.innerHTML = `Size: ${size}`;
+
+      templeInfo.append(locationTag, dedicatedTag, sizeTag);
+
+      templeCard.append(templeInfo, image);
+      templeDiv.append(templeCard);
+    }
+  };
+
+  displayTemples(temples);
+
+  const oldTemples = temples.filter(
+    (elem) => parseInt(elem.dedicated.split(",")[0]) < 1900
+  );
+  const newTemples = temples.filter(
+    (elem) => parseInt(elem.dedicated.split(",")[0]) > 2000
+  );
+  const largeTemples = temples.filter((elem) => elem.area > 90000);
+  const smallTemples = temples.filter((elem) => elem.area < 10000);
+
+  // const home = document.querySelector("#home");
+  // home.addEventListener("click", () => {
+  //   templeDiv.innerHTML = "";
+  //   displayTemples(temples);
+  // });
+  // const old = document.querySelector("#old");
+  // old.addEventListener("click", () => {
+  //   templeDiv.innerHTML = "";
+  //   displayTemples(oldTemples);
+  // });
+  // const newT = document.querySelector("#new");
+  // newT.addEventListener("click", () => {
+  //   templeDiv.innerHTML = "";
+  //   displayTemples(newTemples);
+  // });
+  // const large = document.querySelector("#large");
+  // large.addEventListener("click", () => {
+  //   templeDiv.innerHTML = "";
+  //   displayTemples(largeTemples);
+  // });
+  // const small = document.querySelector("#small");
+  // small.addEventListener("click", () => {
+  //   templeDiv.innerHTML = "";
+  //   displayTemples(smallTemples);
+  // });
+
+
+const filterTemples = {
+  home: temples,
+  old: oldTemples,
+  new: newTemples,
+  large: largeTemples,
+  small: smallTemples,
+};
+
+const handleFilterTemplesClick = (filter) => {
+  templeDiv.innerHTML = "";
+  displayTemples(filterTemples[filter]);
+};  
+
+Object.keys(handleFilterTemplesClick).forEach((key) => {
+  document
+    .querySelector(`#${key}`)
+    .addEventListener("click", () => handleFilterTemplesClick(key));
 });
 
-const templeDiv = document.querySelector("div");
-for (const temple of temples) {
-  const templeCard = document.createElement("div");
-  templeCard.id = "templeCard"
-  const templeInfo = document.createElement("div");
-  templeInfo.id = "templeInfo";
+});
 
-  const image = document.createElement("img");
-  image.src = temple.imageUrl;
-  image.alt = temple.templeName;
-  image.loading = "lazy";
 
-  let locationTag = document.createElement("span");
-  let dedicatedTag = document.createElement("span");
-  let sizeTag = document.createElement("span");
 
-  const location = temple.location;
-  const dedicated = temple.dedicated;
-  const size = temple.area;
-
-  locationTag.innerHTML = `Location: ${location}`;
-  dedicatedTag.innerHTML = `Dedicated: ${dedicated}`;
-  sizeTag.innerHTML = `Size: ${size}`;
-
-  templeInfo.append(locationTag);
-  templeInfo.append(dedicatedTag);
-  templeInfo.append(sizeTag);
-
-  templeCard.append(templeInfo);
-  templeCard.append(image);
-  templeDiv.append(templeCard);
-}

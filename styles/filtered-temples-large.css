@@ -1,4 +1,4 @@
-@media screen and (min-width: 400px){
+@media screen and (min-width: 640px){
     main div {
       grid-template-columns: 1fr 1fr 1fr;
     }
@@ -14,12 +14,12 @@
 
     nav a {
     display: block;
-    padding-left: 20%;
+    padding-left: 5%;
     color: white;
     text-decoration: none;
 }
 
-#templeInfo span{
+.templeInfo span{
   font-size: 95%;
 }
 
@@ -33,3 +33,4 @@ nav a:hover {
 }
 
 }
+
