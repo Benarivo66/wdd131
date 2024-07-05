@@ -1,0 +1,67 @@
+.lora-normal {
+  font-family: "Lora", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.outfit-normal {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+:root {
+  --primary-color: #03390c;
+  --secondary-color: #fff;
+}
+
+header {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+}
+
+h2, h3 {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    display: inline-block;
+    padding: 0.5%;
+}
+
+/* #wireframe {
+    display: flex;
+    flex-direction: column;
+} */
+
+#mobile-desktop {
+    display: flex;
+    justify-content: space-around;
+}
+
+#mobile-desktop div {
+    display: flex;
+    flex-direction: column;
+}
+
+#mobile-desktop span {
+    padding-top: 2%;
+}
+
+img {
+    max-height: 600px;
+    width: auto; 
+}
+
+footer {
+  background-color: var(--primary-color);
+  color:var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
