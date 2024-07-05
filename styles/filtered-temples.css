@@ -3,28 +3,23 @@
   font-weight: 600;
   font-style: normal;
 }
-
 .outfit-normal {
   font-family: "Outfit", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
 :root {
   --primary-color: #03390c;
   --secondary-color: rgb(211, 209, 209);
 }
-
 main {
   width: 80%;
   margin: 0 auto;
 }
-
 main div {
   display: grid;
   grid-template-columns: 1fr;
 }
-
 header {
     display: flex;
     justify-content: space-between;
@@ -32,7 +27,6 @@ header {
     background-color: var(--primary-color);
     color: white;
 }
-
 #menu {
   background: none;
   border: 0;
@@ -42,45 +36,37 @@ header {
   right: 1rem;
   top: 1rem;
 }
-
 #menu::before {
 	content: "☰";
+  color: white;
 }
-
 #menu.open::before {
   content: "x";
 }
-
 .open a {
   display: block;
 }
-
 h1 {
     padding-left: 2%;
 }
-
 nav {
     display: flex;
     flex-direction: column;
     list-style: none;
 }
-
 nav a {
     display: none;
     padding: 1rem 2rem;
     text-align: center;
     text-decoration: none;
 }
-
 nav a:hover {
   text-decoration: underline double;
 }
-
 img {
   max-width: 70%;
   height: auto;
 }
-
 .templeCard {
   background-color: var(--secondary-color);
   display: flex;
@@ -89,12 +75,10 @@ img {
   margin: 2%;
   padding: 5%;
 }
-
 .templeInfo {
   display: flex;
   flex-direction: column;
 }
-
 .templeInfo span {
   text-align: left;
   font-size: 0.7rem;
@@ -102,7 +86,6 @@ img {
   flex-direction: column;
   margin: 2% auto;
 }
-
 footer {
   background-color: var(--primary-color);
   color:var(--secondary-color);
@@ -111,3 +94,34 @@ footer {
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 640px){
+    main div {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #menu {
+      display: none;
+    }
+    nav {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+    nav a {
+    display: block;
+    padding-left: 5%;
+    color: white;
+    text-decoration: none;
+}
+.templeInfo span{
+  font-size: 95%;
+}
+img {
+  max-width: 100%;
+    height: auto;
+}
+nav a:hover {
+  text-decoration: underline double;
+}
+}
+
+
