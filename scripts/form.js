@@ -37,3 +37,24 @@ products.forEach((product) => {
     option.textContent = product.name;
     select.appendChild(option);
 })
+const ratingHeading = document.querySelector("#ratingContainer p");
+    const radioButtons = document.querySelectorAll("input[type='radio']");
+    const underlineRatingHeading = () => {
+        let isChecked = false;
+        radioButtons.forEach(button => {
+            if (button.checked) {
+                isChecked = true;
+            }
+        });
+        if (isChecked) {
+            ratingHeading.style.textDecoration = "underline";
+            ratingHeading.style.textDecorationColor = "green";
+        } else {
+            ratingHeading.style.textDecoration = "underline";
+            ratingHeading.style.textDecorationColor = "red";
+        }
+    }
+    underlineRatingHeading();
+    radioButtons.forEach(button => {
+        button.addEventListener('change', underlineRatingHeading);
+    });
