@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Page</title>
+    <meta name="description" content=" WDD 131 - Review Page, Anthony Izekor">
+    <meta name="author" content="Anthony Izekor">
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const span = document.querySelector("span");
+        let count = localStorage.getItem("counter")
+          ? parseInt(localStorage.getItem("counter"))
+          : 0;
+        count += 1;
+        span.textContent = count;
+        localStorage.setItem("counter", count);
+      });
+    </script>
+  </head>
+  <body>
+    <div style="font-size: 2rem; text-align: center">
+      <p>Number of times form submitted:</p>
+      <span></span>
+    </div>
+  </body>
+</html>
