@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -24,54 +24,20 @@
     <main class="outfit-normal">
       <form method="get" action="review.html" id="form">
         <div class="container">
-          <label for="product"
-            >Product Name
-            <select id="product" name="product" required>
-              <option value="" disabled selected>Select a Product... &#9662;</option>
-            </select>
-          </label>
+          <label for="product">Product Name<select id="product" name="product" required><option value="" disabled selected>Select a Product... &#9662;</option></select></label>
         </div>
         <div class="container" id="ratingContainer">
         <p>Overall Rating</p>
         <div id="rating">
-            <label for="poorRating"
-              >&star;<input id="poorRating" name="rating" type="radio" required
-            /></label>
-            <label for="fairRating"
-              >&star;&star;<input
-                id="fairRating"
-                name="rating"
-                type="radio"
-                required
-            /></label>
-            <label for="avgRating"
-              >&star;&star;&star;<input
-                id="avgRating"
-                name="rating"
-                type="radio"
-                required
-            /></label>
-            <label for="goodRating"
-              >&star;&star;&star;&star;<input
-                id="goodRating"
-                name="rating"
-                type="radio"
-                required
-            /></label>
-            <label for="excellentRating"
-              >&star;&star;&star;&star;&star;<input
-                id="excellentRating"
-                name="rating"
-                type="radio"
-                required
-            /></label>
+            <label for="poorRating">&star;<input id="poorRating" name="rating" type="radio" required/></label>
+            <label for="fairRating">&star;&star;<input id="fairRating" name="rating" type="radio" required/></label>
+            <label for="avgRating">&star;&star;&star;<input id="avgRating" name="rating" type="radio" required/></label>
+            <label for="goodRating">&star;&star;&star;&star;<input id="goodRating" name="rating" type="radio" required/></label>
+            <label for="excellentRating">&star;&star;&star;&star;&star;<input id="excellentRating" name="rating" type="radio" required/></label>
         </div>
         </div>
         <div class="container">
-          <label for="date"
-            >Date of Installation
-            <input id="date" name="date" type="date" required
-          /></label>
+          <label for="date">Date of Installation<input id="date" name="date" type="date" required/></label>
         </div>
         <div class="container">
           <p>
@@ -79,31 +45,19 @@
               >check all that apply</i
             >)
           </p>
-          <div>
-            <label for="durable"
-              ><input
-                id="durable"
-                name="feature"
-                value="yes"
-                type="checkbox"
-              />Durability</label
-            >
-            <label for="ease"
-              ><input
+          <div><label for="durable"><input id="durable" name="feature" value="yes" type="checkbox">Durability</label>
+            <label for="ease"><input
                 id="ease"
                 name="feature"
                 value="yes"
                 type="checkbox"
-              />Ease of use</label
-            >
-            <label for="perform"
-              ><input
+              />Ease of use</label>
+            <label for="perform"><input
                 id="perform"
                 name="feature"
                 value="yes"
                 type="checkbox"
-              />Performance</label
-            >
+              />Performance</label>
             <label for="design"
               ><input
                 id="design"
@@ -136,4 +90,96 @@
       <p id="lastModified"></p>
     </footer>
   </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="description" content="WDD 131 - Form, Anthony Izekor">
+    <meta name="author" content="Anthony Izekor">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&display=swap">
+    <script src="scripts/form.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="lora-normal">Product Review</h1>
+    </header>
+    <main class="outfit-normal">
+      <form method="get" action="review.html" id="form">
+        <div class="container">
+          <label for="product">Product Name
+            <select id="product" name="product" required>
+              <option value="" disabled selected>Select a Product... &#9662;</option>
+            </select>
+          </label>
+        </div>
+        <div class="container" id="ratingContainer">
+          <p>Overall Rating</p>
+          <div id="rating">
+            <label for="poorRating">&star;
+              <input id="poorRating" name="rating" type="radio" required/>
+            </label>
+            <label for="fairRating">&star;&star;
+              <input id="fairRating" name="rating" type="radio" required/>
+            </label>
+            <label for="avgRating">&star;&star;&star;
+              <input id="avgRating" name="rating" type="radio" required/>
+            </label>
+            <label for="goodRating">&star;&star;&star;&star;
+              <input id="goodRating" name="rating" type="radio" required/>
+            </label>
+            <label for="excellentRating">&star;&star;&star;&star;&star;
+              <input id="excellentRating" name="rating" type="radio" required/>
+            </label>
+          </div>
+        </div>
+        <div class="container">
+          <label for="date">Date of Installation
+            <input id="date" name="date" type="date" required/>
+          </label>
+        </div>
+        <div class="container">
+          <p>
+            What features did you find useful in the product? (<i>check all that apply</i>)
+          </p>
+          <div>
+            <label for="durable">
+              <input id="durable" name="feature" value="yes" type="checkbox"/>Durability
+            </label>
+            <label for="ease">
+              <input id="ease" name="feature" value="yes" type="checkbox"/>Ease of use
+            </label>
+            <label for="perform">
+              <input id="perform" name="feature" value="yes" type="checkbox"/>Performance
+            </label>
+            <label for="design">
+              <input id="design" name="feature" value="yes" type="checkbox"/>Design
+            </label>
+          </div>
+        </div>
+        <div class="container">
+          <label for="written">Written Review(Optional)
+            <textarea name="writtenReview" id="written"></textarea>
+          </label>
+        </div>
+        <div class="container">
+          <label for="name">Your Name (Optional)
+            <input id="name" name="name" type="text"/>
+          </label>
+        </div>
+        <input type="submit" value="Post Review"/>
+      </form>
+    </main>
+    <footer class="outfit-normal">
+      <p>©<span id="currentyear"></span> Anthony Izekor Nigeria</p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
 </html>
+
