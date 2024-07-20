@@ -114,26 +114,26 @@ document.addEventListener("DOMContentLoaded", () => {
     compWrap.appendChild(div);
   });
 });
-const naira = document.getElementById("naira");
-const dollar = document.getElementById("dollar");
-const euros = document.getElementById("euros");
-const pounds = document.getElementById("pounds");
-const result = document.getElementById("result");
-naira.addEventListener("click", () => {
+const exchangeRates = {
+  naira: 105943740,
+  dollar: 64925,
+  euros: 59468,
+  pounds: 50018,
+};
+const convertCurrency = (currency) => {
   const valToXchange = document.getElementById("xchange-value").value;
-    alert(`${Math.round(valToXchange * 105943740)} naira`);
-});
-dollar.addEventListener("click", () => {
-  const valToXchange = document.getElementById("xchange-value").value;
-    alert(`${Math.round(valToXchange * 64925)} dollar`);
-});
-euros.addEventListener("click", () => {
-  const valToXchange = document.getElementById("xchange-value").value;
-    alert(`${Math.round(valToXchange * 59468)} euros`);
-});
-pounds.addEventListener("click", () => {
-  const valToXchange = document.getElementById("xchange-value").value;
-    alert(`${Math.round(valToXchange * 50018)} pounds`);
+  if (!valToXchange) {
+    alert("Please enter a value to exchange");
+    return;
+  }
+  const result = Math.round(valToXchange * exchangeRates[currency]);
+  alert(`${result} ${currency}`);
+};
+document.querySelector(".convert").addEventListener("click", (event) => {
+  if (event.target.tagName === "BUTTON") {
+    const currency = event.target.id;
+    convertCurrency(currency);
+  }
 });
 const menu = document.getElementById("menu");
 const navg = document.querySelector("nav");
@@ -141,6 +141,3 @@ menu.addEventListener("click", () => {
   navg.classList.toggle("open");
   menu.classList.toggle("open");
 });
-
-
-
