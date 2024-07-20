@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Page</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const span = document.querySelector("span");
+          let count = localStorage.getItem("count")
+            ? parseInt(localStorage.getItem("count"))
+            : 0;
+          count += 1;
+          span.textContent = count;
+          localStorage.setItem("count", count);
+        });
+      </script>
+</head>
+<body>
+    <div style="font-size: 2rem; text-align: center">
+        <p>Number of inquiries made so far</p>
+        <span></span><br>
+        <br><a href="bitcoin.html">Back to Home</a>
+      </div> 
+</body>
+</html>

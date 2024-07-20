@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn About Bitcoin</title>
+    <meta
+      name="description"
+      content=" WDD 131 - Temple Album, Anthony Izekor">
+    <meta name="author" content="Anthony Izekor">
+    <link rel="stylesheet" href="styles/bitcoin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="preload"
+      as="style"    
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&display=swap">
+  <script src="scripts/bitcoin.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/bitcoinlogo.webp" alt="bitcoin logo" loading="lazy">
+        <h1 class="lora-normal">Bitcoin: The Future of Money</h1>
+        <button id="menu" aria-label="Menu"></button>
+        <nav class="outfit-normal">
+           <a href="bitcoin.html" aria-label="Home">Home</a>
+           <a href="#" aria-label="Learn More">Learn More</a>
+           <a href="#" aria-label="Contact Us">Contact Us</a>
+        </nav>
+    </header>
+        <main class="outfit-normal">
+            <div class="images">
+                <img src="images/man.webp" alt="man looking at screen" loading="lazy">
+                <img src="images/woman_coin.webp" alt="woman with bitcoin coin to her eyes" loading="lazy">
+                <img src="images/qalaphoto.webp" alt="Four bitcoin devs posing for a photo" loading="lazy">
+            </div>
+            <div class="companies">
+                <h2 class="lora-normal">Bitcoin-Related Companies</h2>
+                <div class="compWrap"></div>
+            </div>
+            <div class="btcinfo">
+                <h2 class="lora-normal">What is Bitcoin?</h2>
+                <p>
+                    Bitcoin is a decentralized digital asset. It is a new type of asset that joins the ranks of traditional assets such as cash, gold, and real estate. It is the first decentralized cryptocurrency. Nodes in the peer-to-peer bitcoin network verify transactions through cryptography and record them in a public distributed ledger, called a blockchain, without central oversight. Consensus between nodes is achieved using a computationally intensive process based on proof of work, called mining, that guarantees the security of the bitcoin blockchain. Mining consumes large quantities of electricity and has been criticized for its environmental
+                </p>
+                <p>At present, El Salvador and the Central African Republic (CAR) are the only two countries in the world where Bitcoin functions as a legal currency. However, speculations abound that many others are likely to follow suit. It is worthy to note that although most nations have not officially accepted it as legal tender, its use in every day business activities is as popular as the official currencies, especially in developed nations.</p>
+            </div>
+            <div class="convert">
+                <h2 class="lora-normal">Convert Bitcoin</h2>
+                <div>
+                    <label for="xchange-value">Enter Bitcoin Value<input id="xchange-value" name="xchange-value" type="number"></label>
+                    <div>
+                        <button id="naira" aria-label="Convert to Naira">Convert to Naira</button>
+                    <button id="dollar" aria-label="Convert to Dollar">Convert to Dollar</button>
+                    <button id="euros" aria-label="Convert to Euros">Convert to Euros</button>
+                    <button id="pounds" aria-label="Convert to Pounds">Convert to Pounds</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="outfit-normal">
+            <p>©<span id="currentyear"></span> Anthony Izekor Nigeria</p>
+            <p id="lastModified"></p>
+            <a href="references.html" aria-label="Link to references">Link to references</a>
+          </footer>
+</body>
+</html>
